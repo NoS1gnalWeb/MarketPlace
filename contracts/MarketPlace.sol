@@ -41,7 +41,7 @@ contract MarketPlace{
     }
     
     /*
-
+        Permet de récuperer le status actuel
     */
     function getStatus() public view returns(ShippingStatus){
         require(msg.sender == owner, 
@@ -50,7 +50,7 @@ contract MarketPlace{
     }
 
     /*
-
+        Permet de récuperer le status actuel pour un customer
     */
     function Status() public payable returns(ShippingStatus){
         require(msg.sender == customer, "This function is restricted to the contract's customer");
