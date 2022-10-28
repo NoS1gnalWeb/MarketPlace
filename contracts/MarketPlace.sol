@@ -58,17 +58,7 @@ contract MarketPlace{
         return status;
     }
 
-    /**
-     * Fonction test pour savoir si on arrive a avoir le balance
-     */
-    function cell() public payable returns (uint) {
-        return address(this).balance;
-    }
 
-    // function transfer(address payable _to, uint _amount) public {
-    //     (bool success, ) = _to.call{value: _amount}("");
-    //     require(success, "Failed to send Ether");
-    // }
 
 }
 
