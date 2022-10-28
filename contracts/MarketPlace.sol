@@ -1,11 +1,11 @@
+// SPDX-License-Identifier: MIT
 pragma solidity >=0.4.22 <0.9.0;
 
-
-contract MartketPlace { 
+contract MarketPlace{ 
 
     enum ShippingStatus{ PENDING, SHIPPED, DELIVERED }
     ShippingStatus status;
-    address payable public owner;
+    address public owner;
     address customer;
     event MissionComplete();
     
@@ -13,9 +13,9 @@ contract MartketPlace {
         Initialisation du contrat entre le owner et le customer 
         avec le status shipped en PENDING.
     */
-    constructor(address _customer) public payable {
-        owner = payable(msg.sender);
-        customer = _customer;
+    constructor() public {
+        owner = msg.sender;
+        //customer = _customer;
         status = ShippingStatus.PENDING;
     }
 
@@ -52,13 +52,23 @@ contract MartketPlace {
     /*
 
     */
-    function Status() public returns(ShippingStatus){
-        require(msg.sender == customer, 
-                "This function is restricted to the contract's owner");
-        
-        transfer(owner, 5);
+    function Status() public payable returns(ShippingStatus){
+        require(msg.sender == customer, "This function is restricted to the contract's customer");
+        require(msg.value == 1 ** -5 ether);
         return status;
     }
+
+    /**
+     * Fonction test pour savoir si on arrive a avoir le balance
+     */
+    function cell() public payable returns (uint) {
+        return address(this).balance;
+    }
+
+    // function transfer(address payable _to, uint _amount) public {
+    //     (bool success, ) = _to.call{value: _amount}("");
+    //     require(success, "Failed to send Ether");
+    // }
 
 }
 

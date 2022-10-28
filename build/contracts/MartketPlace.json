@@ -20,6 +20,21 @@
       "type": "event"
     },
     {
+      "constant": true,
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
       "constant": false,
       "inputs": [],
       "name": "Shipped",
@@ -53,7 +68,7 @@
       "type": "function"
     },
     {
-      "constant": true,
+      "constant": false,
       "inputs": [],
       "name": "Status",
       "outputs": [
@@ -63,30 +78,45 @@
           "type": "uint8"
         }
       ],
-      "payable": false,
-      "stateMutability": "view",
+      "payable": true,
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "cell",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": true,
+      "stateMutability": "payable",
       "type": "function"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_customer\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[],\"name\":\"MissionComplete\",\"type\":\"event\"},{\"constant\":false,\"inputs\":[],\"name\":\"Delivered\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[],\"name\":\"Shipped\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"Status\",\"outputs\":[{\"internalType\":\"enum MartketPlace.ShippingStatus\",\"name\":\"\",\"type\":\"uint8\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"getStatus\",\"outputs\":[{\"internalType\":\"enum MartketPlace.ShippingStatus\",\"name\":\"\",\"type\":\"uint8\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"project:/contracts/MarketPlace.sol\":\"MartketPlace\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/MarketPlace.sol\":{\"keccak256\":\"0xa545cc44c23f09c97990fe2e5393d74617b4aa6a5df5bc9de3b132a9053333d4\",\"urls\":[\"bzz-raw://c6ca977d9ccf279e27038fc462010eb0199e713d1c8346b3d285de2765bbbb57\",\"dweb:/ipfs/QmZxG3Ggv3vp6pncmqamEPFNNgBF4cEsSWKy3W8zng5d5Q\"]}},\"version\":1}",
-  "bytecode": "0x608060405234801561001057600080fd5b506040516102133803806102138339818101604052602081101561003357600080fd5b505160008054610100600160a81b031916336101000217808255600180546001600160a01b0319166001600160a01b038516178155829160ff1916908202179055505061018e806100856000396000f3fe608060405234801561001057600080fd5b506004361061004c5760003560e01c806345f09ce9146100515780634e69d5601461007d578063779822f7146100855780637e59301e1461008f575b600080fd5b610059610097565b6040518082600281111561006957fe5b60ff16815260200191505060405180910390f35b6100596100bf565b61008d6100dc565b005b61008d61012e565b6000805461010090046001600160a01b03163314156100b557600080fd5b5060005460ff1690565b6000805461010090046001600160a01b031633146100b557600080fd5b60005461010090046001600160a01b031633146100f857600080fd5b6000805460ff191660021781556040517f36b3427b9db85e3915108cfe803971ea1ab2908152d7f72b55bf3a001c67a8659190a1565b60005461010090046001600160a01b0316331461014a57600080fd5b6000805460ff1916600117905556fea265627a7a72315820147429b9f58c82c6a907b357be92f00ec75be2724b8c4d6702afbb78827a56e164736f6c63430005100032",
-  "deployedBytecode": "0x608060405234801561001057600080fd5b506004361061004c5760003560e01c806345f09ce9146100515780634e69d5601461007d578063779822f7146100855780637e59301e1461008f575b600080fd5b610059610097565b6040518082600281111561006957fe5b60ff16815260200191505060405180910390f35b6100596100bf565b61008d6100dc565b005b61008d61012e565b6000805461010090046001600160a01b03163314156100b557600080fd5b5060005460ff1690565b6000805461010090046001600160a01b031633146100b557600080fd5b60005461010090046001600160a01b031633146100f857600080fd5b6000805460ff191660021781556040517f36b3427b9db85e3915108cfe803971ea1ab2908152d7f72b55bf3a001c67a8659190a1565b60005461010090046001600160a01b0316331461014a57600080fd5b6000805460ff1916600117905556fea265627a7a72315820147429b9f58c82c6a907b357be92f00ec75be2724b8c4d6702afbb78827a56e164736f6c63430005100032",
-  "sourceMap": "34:863:1:-;;;219:144;8:9:-1;5:2;;;30:1;27;20:12;5:2;219:144:1;;;;;;;;;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;219:144:1;267:5;:18;;-1:-1:-1;;;;;;267:18:1;275:10;267:18;;;;;;-1:-1:-1;295:20:1;;-1:-1:-1;;;;;;295:20:1;-1:-1:-1;;;;;295:20:1;;;;;267:5;;-1:-1:-1;;325:31:1;;267:5;325:31;;;;;219:144;34:863;;;;;;",
-  "deployedSourceMap": "34:863:1:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;34:863:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;773:121;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;641:126;;;:::i;487:148::-;;;:::i;:::-;;369:112;;;:::i;773:121::-;811:14;858:5;;;;;-1:-1:-1;;;;;858:5:1;844:10;:19;;836:28;;;;;;-1:-1:-1;881:6:1;;;;773:121;:::o;641:126::-;682:14;729:5;;;;;-1:-1:-1;;;;;729:5:1;715:10;:19;707:28;;;;;487:148;547:5;;;;;-1:-1:-1;;;;;547:5:1;533:10;:19;525:28;;;;;;563:6;:33;;-1:-1:-1;;563:33:1;572:24;563:33;;;611:17;;;;563:6;611:17;487:148::o;369:112::-;427:5;;;;;-1:-1:-1;;;;;427:5:1;413:10;:19;405:28;;;;;;443:6;:31;;-1:-1:-1;;443:31:1;452:22;443:31;;;369:112::o",
-  "source": "pragma solidity >=0.4.22 <0.9.0;\n\ncontract MartketPlace{\n    enum ShippingStatus{ PENDING, SHIPPED, DELIVERED }\n    ShippingStatus status;\n    address owner;\n    address customer;\n\n    event MissionComplete();\n    \n    constructor(address _customer) public {\n        owner = msg.sender;\n        customer = _customer;\n        status = ShippingStatus.PENDING;\n    }\n\n    function Shipped() public {\n        require(msg.sender == owner);\n        status = ShippingStatus.SHIPPED;\n    }\n\n    function Delivered() public {\n        require(msg.sender == owner);\n        status = ShippingStatus.DELIVERED;\n        emit MissionComplete();\n    }\n\n    function getStatus() public view returns(ShippingStatus){\n        require(msg.sender == owner);  \n        return status;\n    }\n\n    function Status() public view returns(ShippingStatus){\n        require(msg.sender != owner);\n        return status;\n    }\n\n}\n\n\n\n\n\n\n\n\n\n",
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_customer\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[],\"name\":\"MissionComplete\",\"type\":\"event\"},{\"constant\":false,\"inputs\":[],\"name\":\"Delivered\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[],\"name\":\"Shipped\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[],\"name\":\"Status\",\"outputs\":[{\"internalType\":\"enum MartketPlace.ShippingStatus\",\"name\":\"\",\"type\":\"uint8\"}],\"payable\":true,\"stateMutability\":\"payable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[],\"name\":\"cell\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":true,\"stateMutability\":\"payable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"getStatus\",\"outputs\":[{\"internalType\":\"enum MartketPlace.ShippingStatus\",\"name\":\"\",\"type\":\"uint8\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"owner\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{\"cell()\":{\"notice\":\"Fonction test pour savoir si on arrive a avoir le balance\"}}}},\"settings\":{\"compilationTarget\":{\"project:/contracts/MarketPlace.sol\":\"MartketPlace\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/MarketPlace.sol\":{\"keccak256\":\"0xe5d36ab105940677379b25b0b135ca8fd72127481ee48ab47fad6431a0762ad0\",\"urls\":[\"bzz-raw://9091a13ea87f2c086e9e802a7eb1ee0c06989e800f0be6631978fed988ae939d\",\"dweb:/ipfs/QmRcpvf2q9fMjdrpoSRumhbW8Fd6mRe3w693eSPEk44h2W\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b506040516103e03803806103e08339818101604052602081101561003357600080fd5b505160008054610100600160a81b031916336101000217808255600180546001600160a01b0319166001600160a01b038516178155829160ff1916908202179055505061035b806100856000396000f3fe6080604052600436106100555760003560e01c806345f09ce91461005a5780634e69d56014610086578063779822f71461009b5780637e59301e146100b25780638da5cb5b146100c75780639b723e15146100f8575b600080fd5b610062610112565b6040518082600281111561007257fe5b60ff16815260200191505060405180910390f35b34801561009257600080fd5b50610062610175565b3480156100a757600080fd5b506100b06101c4565b005b3480156100be57600080fd5b506100b0610248565b3480156100d357600080fd5b506100dc6102a5565b604080516001600160a01b039092168252519081900360200190f35b6101006102b9565b60408051918252519081900360200190f35b6001546000906001600160a01b0316331461015e5760405162461bcd60e51b81526004018080602001828103825260368152602001806102be6036913960400191505060405180910390fd5b3460011461016b57600080fd5b5060005460ff1690565b6000805461010090046001600160a01b0316331461016b5760405162461bcd60e51b81526004018080602001828103825260338152602001806102f46033913960400191505060405180910390fd5b60005461010090046001600160a01b031633146102125760405162461bcd60e51b81526004018080602001828103825260338152602001806102f46033913960400191505060405180910390fd5b6000805460ff191660021781556040517f36b3427b9db85e3915108cfe803971ea1ab2908152d7f72b55bf3a001c67a8659190a1565b60005461010090046001600160a01b031633146102965760405162461bcd60e51b81526004018080602001828103825260338152602001806102f46033913960400191505060405180910390fd5b6000805460ff19166001179055565b60005461010090046001600160a01b031681565b479056fe546869732066756e6374696f6e206973207265737472696374656420746f2074686520636f6e7472616374277320637573746f6d6572546869732066756e6374696f6e206973207265737472696374656420746f2074686520636f6e74726163742773206f776e6572a265627a7a723158207181593128d270158d89738e3b39af57ee9b67a9e88bf4fa8fbb01ad086d73a464736f6c63430005100032",
+  "deployedBytecode": "0x6080604052600436106100555760003560e01c806345f09ce91461005a5780634e69d56014610086578063779822f71461009b5780637e59301e146100b25780638da5cb5b146100c75780639b723e15146100f8575b600080fd5b610062610112565b6040518082600281111561007257fe5b60ff16815260200191505060405180910390f35b34801561009257600080fd5b50610062610175565b3480156100a757600080fd5b506100b06101c4565b005b3480156100be57600080fd5b506100b0610248565b3480156100d357600080fd5b506100dc6102a5565b604080516001600160a01b039092168252519081900360200190f35b6101006102b9565b60408051918252519081900360200190f35b6001546000906001600160a01b0316331461015e5760405162461bcd60e51b81526004018080602001828103825260368152602001806102be6036913960400191505060405180910390fd5b3460011461016b57600080fd5b5060005460ff1690565b6000805461010090046001600160a01b0316331461016b5760405162461bcd60e51b81526004018080602001828103825260338152602001806102f46033913960400191505060405180910390fd5b60005461010090046001600160a01b031633146102125760405162461bcd60e51b81526004018080602001828103825260338152602001806102f46033913960400191505060405180910390fd5b6000805460ff191660021781556040517f36b3427b9db85e3915108cfe803971ea1ab2908152d7f72b55bf3a001c67a8659190a1565b60005461010090046001600160a01b031633146102965760405162461bcd60e51b81526004018080602001828103825260338152602001806102f46033913960400191505060405180910390fd5b6000805460ff19166001179055565b60005461010090046001600160a01b031681565b479056fe546869732066756e6374696f6e206973207265737472696374656420746f2074686520636f6e7472616374277320637573746f6d6572546869732066756e6374696f6e206973207265737472696374656420746f2074686520636f6e74726163742773206f776e6572a265627a7a723158207181593128d270158d89738e3b39af57ee9b67a9e88bf4fa8fbb01ad086d73a464736f6c63430005100032",
+  "sourceMap": "66:1930:0:-;;;381:144;8:9:-1;5:2;;;30:1;27;20:12;5:2;381:144:0;;;;;;;;;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;381:144:0;429:5;:18;;-1:-1:-1;;;;;;429:18:0;437:10;429:18;;;;;;-1:-1:-1;457:20:0;;-1:-1:-1;;;;;;457:20:0;-1:-1:-1;;;;;457:20:0;;;;;429:5;;-1:-1:-1;;487:31:0;;429:5;487:31;;;;;381:144;66:1930;;;;;;",
+  "deployedSourceMap": "66:1930:0:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1393:230;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1174:198;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1174:198:0;;;:::i;930:219::-;;8:9:-1;5:2;;;30:1;27;20:12;5:2;930:219:0;;;:::i;:::-;;590:183;;8:9:-1;5:2;;;30:1;27;20:12;5:2;590:183:0;;;:::i;177:20::-;;8:9:-1;5:2;;;30:1;27;20:12;5:2;177:20:0;;;:::i;:::-;;;;-1:-1:-1;;;;;177:20:0;;;;;;;;;;;;;;1710:91;;;:::i;:::-;;;;;;;;;;;;;;;;1393:230;1481:8;;1434:14;;-1:-1:-1;;;;;1481:8:0;1467:10;:22;1459:89;;;;-1:-1:-1;;;1459:89:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1566:9;1579:13;1566:26;1558:35;;;;;;-1:-1:-1;1610:6:0;;;;1393:230;:::o;1174:198::-;1215:14;1262:5;;;;;-1:-1:-1;;;;;1262:5:0;1248:10;:19;1240:100;;;;-1:-1:-1;;;1240:100:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;930:219;990:5;;;;;-1:-1:-1;;;;;990:5:0;976:10;:19;968:99;;;;-1:-1:-1;;;968:99:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1077:6;:33;;-1:-1:-1;;1077:33:0;1086:24;1077:33;;;1125:17;;;;1077:6;1125:17;930:219::o;590:183::-;648:5;;;;;-1:-1:-1;;;;;648:5:0;634:10;:19;626:99;;;;-1:-1:-1;;;626:99:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;735:6;:31;;-1:-1:-1;;735:31:0;744:22;735:31;;;590:183::o;177:20::-;;;;;;-1:-1:-1;;;;;177:20:0;;:::o;1710:91::-;1773:21;1710:91;:::o",
+  "source": "// SPDX-License-Identifier: MIT\npragma solidity >=0.4.22 <0.9.0;\n\ncontract MartketPlace{ \n\n    enum ShippingStatus{ PENDING, SHIPPED, DELIVERED }\n    ShippingStatus status;\n    address public owner;\n    address customer;\n    event MissionComplete();\n    \n    /*\n        Initialisation du contrat entre le owner et le customer \n        avec le status shipped en PENDING.\n    */\n    constructor(address _customer) public {\n        owner = msg.sender;\n        customer = _customer;\n        status = ShippingStatus.PENDING;\n    }\n\n\n    /*\n      Change l'état du shipping en shipped\n    */\n    function Shipped() public {\n        require(msg.sender == owner,\n                \"This function is restricted to the contract's owner\");\n        status = ShippingStatus.SHIPPED;\n    }\n\n    /*\n      On change l'état en delivered tout en vérifiant qu'il s'agisse bien\n      de l'owner, ensuite on emit l'event MissionComplete();\n    */\n    function Delivered() public {\n        require(msg.sender == owner,\n                \"This function is restricted to the contract's owner\");\n        status = ShippingStatus.DELIVERED;\n        emit MissionComplete();\n    }\n    \n    /*\n\n    */\n    function getStatus() public view returns(ShippingStatus){\n        require(msg.sender == owner, \n                \"This function is restricted to the contract's owner\");  \n        return status;\n    }\n\n    /*\n\n    */\n    function Status() public payable returns(ShippingStatus){\n        require(msg.sender == customer, \"This function is restricted to the contract's customer\");\n        require(msg.value == 1 ** -5 ether);\n        return status;\n    }\n\n    /**\n     * Fonction test pour savoir si on arrive a avoir le balance\n     */\n    function cell() public payable returns (uint) {\n        return address(this).balance;\n    }\n\n    // function transfer(address payable _to, uint _amount) public {\n    //     (bool success, ) = _to.call{value: _amount}(\"\");\n    //     require(success, \"Failed to send Ether\");\n    // }\n\n}\n\n\n\n\n\n\n\n\n\n",
   "sourcePath": "/home/geist/Documents/Ynov/Eval/contracts/MarketPlace.sol",
   "ast": {
     "absolutePath": "project:/contracts/MarketPlace.sol",
     "exportedSymbols": {
       "MartketPlace": [
-        116
+        124
       ]
     },
-    "id": 117,
+    "id": 125,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 18,
+        "id": 1,
         "literals": [
           "solidity",
           ">=",
@@ -97,7 +127,7 @@
           ".0"
         ],
         "nodeType": "PragmaDirective",
-        "src": "0:32:1"
+        "src": "32:32:0"
       },
       {
         "baseContracts": [],
@@ -105,62 +135,62 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 116,
+        "id": 124,
         "linearizedBaseContracts": [
-          116
+          124
         ],
         "name": "MartketPlace",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "canonicalName": "MartketPlace.ShippingStatus",
-            "id": 22,
+            "id": 5,
             "members": [
               {
-                "id": 19,
+                "id": 2,
                 "name": "PENDING",
                 "nodeType": "EnumValue",
-                "src": "82:7:1"
+                "src": "116:7:0"
               },
               {
-                "id": 20,
+                "id": 3,
                 "name": "SHIPPED",
                 "nodeType": "EnumValue",
-                "src": "91:7:1"
+                "src": "125:7:0"
               },
               {
-                "id": 21,
+                "id": 4,
                 "name": "DELIVERED",
                 "nodeType": "EnumValue",
-                "src": "100:9:1"
+                "src": "134:9:0"
               }
             ],
             "name": "ShippingStatus",
             "nodeType": "EnumDefinition",
-            "src": "61:50:1"
+            "src": "95:50:0"
           },
           {
             "constant": false,
-            "id": 24,
+            "id": 7,
             "name": "status",
             "nodeType": "VariableDeclaration",
-            "scope": 116,
-            "src": "116:21:1",
+            "scope": 124,
+            "src": "150:21:0",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_enum$_ShippingStatus_$22",
+              "typeIdentifier": "t_enum$_ShippingStatus_$5",
               "typeString": "enum MartketPlace.ShippingStatus"
             },
             "typeName": {
               "contractScope": null,
-              "id": 23,
+              "id": 6,
               "name": "ShippingStatus",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 22,
-              "src": "116:14:1",
+              "referencedDeclaration": 5,
+              "src": "150:14:0",
               "typeDescriptions": {
-                "typeIdentifier": "t_enum$_ShippingStatus_$22",
+                "typeIdentifier": "t_enum$_ShippingStatus_$5",
                 "typeString": "enum MartketPlace.ShippingStatus"
               }
             },
@@ -169,11 +199,11 @@
           },
           {
             "constant": false,
-            "id": 26,
+            "id": 9,
             "name": "owner",
             "nodeType": "VariableDeclaration",
-            "scope": 116,
-            "src": "143:13:1",
+            "scope": 124,
+            "src": "177:20:0",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -181,10 +211,10 @@
               "typeString": "address"
             },
             "typeName": {
-              "id": 25,
+              "id": 8,
               "name": "address",
               "nodeType": "ElementaryTypeName",
-              "src": "143:7:1",
+              "src": "177:7:0",
               "stateMutability": "nonpayable",
               "typeDescriptions": {
                 "typeIdentifier": "t_address",
@@ -192,15 +222,15 @@
               }
             },
             "value": null,
-            "visibility": "internal"
+            "visibility": "public"
           },
           {
             "constant": false,
-            "id": 28,
+            "id": 11,
             "name": "customer",
             "nodeType": "VariableDeclaration",
-            "scope": 116,
-            "src": "162:16:1",
+            "scope": 124,
+            "src": "203:16:0",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -208,10 +238,10 @@
               "typeString": "address"
             },
             "typeName": {
-              "id": 27,
+              "id": 10,
               "name": "address",
               "nodeType": "ElementaryTypeName",
-              "src": "162:7:1",
+              "src": "203:7:0",
               "stateMutability": "nonpayable",
               "typeDescriptions": {
                 "typeIdentifier": "t_address",
@@ -224,39 +254,39 @@
           {
             "anonymous": false,
             "documentation": null,
-            "id": 30,
+            "id": 13,
             "name": "MissionComplete",
             "nodeType": "EventDefinition",
             "parameters": {
-              "id": 29,
+              "id": 12,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "206:2:1"
+              "src": "246:2:0"
             },
-            "src": "185:24:1"
+            "src": "225:24:0"
           },
           {
             "body": {
-              "id": 49,
+              "id": 32,
               "nodeType": "Block",
-              "src": "257:106:1",
+              "src": "419:106:0",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 38,
+                    "id": 21,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 35,
+                      "id": 18,
                       "name": "owner",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 26,
-                      "src": "267:5:1",
+                      "referencedDeclaration": 9,
+                      "src": "429:5:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
                         "typeString": "address"
@@ -268,18 +298,18 @@
                       "argumentTypes": null,
                       "expression": {
                         "argumentTypes": null,
-                        "id": 36,
+                        "id": 19,
                         "name": "msg",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 284,
-                        "src": "275:3:1",
+                        "referencedDeclaration": 139,
+                        "src": "437:3:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_magic_message",
                           "typeString": "msg"
                         }
                       },
-                      "id": 37,
+                      "id": 20,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -287,38 +317,38 @@
                       "memberName": "sender",
                       "nodeType": "MemberAccess",
                       "referencedDeclaration": null,
-                      "src": "275:10:1",
+                      "src": "437:10:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address_payable",
                         "typeString": "address payable"
                       }
                     },
-                    "src": "267:18:1",
+                    "src": "429:18:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
                       "typeString": "address"
                     }
                   },
-                  "id": 39,
+                  "id": 22,
                   "nodeType": "ExpressionStatement",
-                  "src": "267:18:1"
+                  "src": "429:18:0"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 42,
+                    "id": 25,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 40,
+                      "id": 23,
                       "name": "customer",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 28,
-                      "src": "295:8:1",
+                      "referencedDeclaration": 11,
+                      "src": "457:8:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
                         "typeString": "address"
@@ -328,26 +358,276 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 41,
+                      "id": 24,
                       "name": "_customer",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 32,
-                      "src": "306:9:1",
+                      "referencedDeclaration": 15,
+                      "src": "468:9:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
                         "typeString": "address"
                       }
                     },
-                    "src": "295:20:1",
+                    "src": "457:20:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
                       "typeString": "address"
                     }
                   },
+                  "id": 26,
+                  "nodeType": "ExpressionStatement",
+                  "src": "457:20:0"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 30,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 27,
+                      "name": "status",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 7,
+                      "src": "487:6:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_enum$_ShippingStatus_$5",
+                        "typeString": "enum MartketPlace.ShippingStatus"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 28,
+                        "name": "ShippingStatus",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 5,
+                        "src": "496:14:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_enum$_ShippingStatus_$5_$",
+                          "typeString": "type(enum MartketPlace.ShippingStatus)"
+                        }
+                      },
+                      "id": 29,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "memberName": "PENDING",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "496:22:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_enum$_ShippingStatus_$5",
+                        "typeString": "enum MartketPlace.ShippingStatus"
+                      }
+                    },
+                    "src": "487:31:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_ShippingStatus_$5",
+                      "typeString": "enum MartketPlace.ShippingStatus"
+                    }
+                  },
+                  "id": 31,
+                  "nodeType": "ExpressionStatement",
+                  "src": "487:31:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 33,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 16,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 15,
+                  "name": "_customer",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 33,
+                  "src": "393:17:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 14,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "393:7:0",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "392:19:0"
+            },
+            "returnParameters": {
+              "id": 17,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "419:0:0"
+            },
+            "scope": 124,
+            "src": "381:144:0",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 49,
+              "nodeType": "Block",
+              "src": "616:157:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        "id": 40,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "expression": {
+                            "argumentTypes": null,
+                            "id": 37,
+                            "name": "msg",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 139,
+                            "src": "634:3:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_magic_message",
+                              "typeString": "msg"
+                            }
+                          },
+                          "id": 38,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "sender",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": null,
+                          "src": "634:10:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address_payable",
+                            "typeString": "address payable"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "==",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "id": 39,
+                          "name": "owner",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 9,
+                          "src": "648:5:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "src": "634:19:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "546869732066756e6374696f6e206973207265737472696374656420746f2074686520636f6e74726163742773206f776e6572",
+                        "id": 41,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "671:53:0",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_f60fe2d9d123295bf92ecf95167f1fa709e374da35e4c083bd39dc2d82acd8b1",
+                          "typeString": "literal_string \"This function is restricted to the contract's owner\""
+                        },
+                        "value": "This function is restricted to the contract's owner"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_stringliteral_f60fe2d9d123295bf92ecf95167f1fa709e374da35e4c083bd39dc2d82acd8b1",
+                          "typeString": "literal_string \"This function is restricted to the contract's owner\""
+                        }
+                      ],
+                      "id": 36,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        142,
+                        143
+                      ],
+                      "referencedDeclaration": 143,
+                      "src": "626:7:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (bool,string memory) pure"
+                      }
+                    },
+                    "id": 42,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "626:99:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
                   "id": 43,
                   "nodeType": "ExpressionStatement",
-                  "src": "295:20:1"
+                  "src": "626:99:0"
                 },
                 {
                   "expression": {
@@ -363,10 +643,10 @@
                       "name": "status",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 24,
-                      "src": "325:6:1",
+                      "referencedDeclaration": 7,
+                      "src": "735:6:0",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_enum$_ShippingStatus_$22",
+                        "typeIdentifier": "t_enum$_ShippingStatus_$5",
                         "typeString": "enum MartketPlace.ShippingStatus"
                       }
                     },
@@ -380,10 +660,10 @@
                         "name": "ShippingStatus",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 22,
-                        "src": "334:14:1",
+                        "referencedDeclaration": 5,
+                        "src": "744:14:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_enum$_ShippingStatus_$22_$",
+                          "typeIdentifier": "t_type$_t_enum$_ShippingStatus_$5_$",
                           "typeString": "type(enum MartketPlace.ShippingStatus)"
                         }
                       },
@@ -392,85 +672,57 @@
                       "isLValue": false,
                       "isPure": true,
                       "lValueRequested": false,
-                      "memberName": "PENDING",
+                      "memberName": "SHIPPED",
                       "nodeType": "MemberAccess",
                       "referencedDeclaration": null,
-                      "src": "334:22:1",
+                      "src": "744:22:0",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_enum$_ShippingStatus_$22",
+                        "typeIdentifier": "t_enum$_ShippingStatus_$5",
                         "typeString": "enum MartketPlace.ShippingStatus"
                       }
                     },
-                    "src": "325:31:1",
+                    "src": "735:31:0",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_enum$_ShippingStatus_$22",
+                      "typeIdentifier": "t_enum$_ShippingStatus_$5",
                       "typeString": "enum MartketPlace.ShippingStatus"
                     }
                   },
                   "id": 48,
                   "nodeType": "ExpressionStatement",
-                  "src": "325:31:1"
+                  "src": "735:31:0"
                 }
               ]
             },
             "documentation": null,
             "id": 50,
             "implemented": true,
-            "kind": "constructor",
+            "kind": "function",
             "modifiers": [],
-            "name": "",
+            "name": "Shipped",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 33,
-              "nodeType": "ParameterList",
-              "parameters": [
-                {
-                  "constant": false,
-                  "id": 32,
-                  "name": "_customer",
-                  "nodeType": "VariableDeclaration",
-                  "scope": 50,
-                  "src": "231:17:1",
-                  "stateVariable": false,
-                  "storageLocation": "default",
-                  "typeDescriptions": {
-                    "typeIdentifier": "t_address",
-                    "typeString": "address"
-                  },
-                  "typeName": {
-                    "id": 31,
-                    "name": "address",
-                    "nodeType": "ElementaryTypeName",
-                    "src": "231:7:1",
-                    "stateMutability": "nonpayable",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_address",
-                      "typeString": "address"
-                    }
-                  },
-                  "value": null,
-                  "visibility": "internal"
-                }
-              ],
-              "src": "230:19:1"
-            },
-            "returnParameters": {
               "id": 34,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "257:0:1"
+              "src": "606:2:0"
             },
-            "scope": 116,
-            "src": "219:144:1",
+            "returnParameters": {
+              "id": 35,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "616:0:0"
+            },
+            "scope": 124,
+            "src": "590:183:0",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           },
           {
             "body": {
-              "id": 65,
+              "id": 69,
               "nodeType": "Block",
-              "src": "395:86:1",
+              "src": "958:191:0",
               "statements": [
                 {
                   "expression": {
@@ -495,8 +747,8 @@
                             "name": "msg",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 284,
-                            "src": "413:3:1",
+                            "referencedDeclaration": 139,
+                            "src": "976:3:0",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_message",
                               "typeString": "msg"
@@ -510,7 +762,7 @@
                           "memberName": "sender",
                           "nodeType": "MemberAccess",
                           "referencedDeclaration": null,
-                          "src": "413:10:1",
+                          "src": "976:10:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_address_payable",
                             "typeString": "address payable"
@@ -524,18 +776,36 @@
                           "name": "owner",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 26,
-                          "src": "427:5:1",
+                          "referencedDeclaration": 9,
+                          "src": "990:5:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_address",
                             "typeString": "address"
                           }
                         },
-                        "src": "413:19:1",
+                        "src": "976:19:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_bool",
                           "typeString": "bool"
                         }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "546869732066756e6374696f6e206973207265737472696374656420746f2074686520636f6e74726163742773206f776e6572",
+                        "id": 58,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "1013:53:0",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_f60fe2d9d123295bf92ecf95167f1fa709e374da35e4c083bd39dc2d82acd8b1",
+                          "typeString": "literal_string \"This function is restricted to the contract's owner\""
+                        },
+                        "value": "This function is restricted to the contract's owner"
                       }
                     ],
                     "expression": {
@@ -543,23 +813,27 @@
                         {
                           "typeIdentifier": "t_bool",
                           "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_stringliteral_f60fe2d9d123295bf92ecf95167f1fa709e374da35e4c083bd39dc2d82acd8b1",
+                          "typeString": "literal_string \"This function is restricted to the contract's owner\""
                         }
                       ],
                       "id": 53,
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        287,
-                        288
+                        142,
+                        143
                       ],
-                      "referencedDeclaration": 287,
-                      "src": "405:7:1",
+                      "referencedDeclaration": 143,
+                      "src": "968:7:0",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
-                        "typeString": "function (bool) pure"
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (bool,string memory) pure"
                       }
                     },
-                    "id": 58,
+                    "id": 59,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -567,34 +841,34 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "405:28:1",
+                    "src": "968:99:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 59,
+                  "id": 60,
                   "nodeType": "ExpressionStatement",
-                  "src": "405:28:1"
+                  "src": "968:99:0"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 63,
+                    "id": 64,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 60,
+                      "id": 61,
                       "name": "status",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 24,
-                      "src": "443:6:1",
+                      "referencedDeclaration": 7,
+                      "src": "1077:6:0",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_enum$_ShippingStatus_$22",
+                        "typeIdentifier": "t_enum$_ShippingStatus_$5",
                         "typeString": "enum MartketPlace.ShippingStatus"
                       }
                     },
@@ -604,218 +878,18 @@
                       "argumentTypes": null,
                       "expression": {
                         "argumentTypes": null,
-                        "id": 61,
+                        "id": 62,
                         "name": "ShippingStatus",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 22,
-                        "src": "452:14:1",
+                        "referencedDeclaration": 5,
+                        "src": "1086:14:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_enum$_ShippingStatus_$22_$",
+                          "typeIdentifier": "t_type$_t_enum$_ShippingStatus_$5_$",
                           "typeString": "type(enum MartketPlace.ShippingStatus)"
                         }
                       },
-                      "id": 62,
-                      "isConstant": false,
-                      "isLValue": false,
-                      "isPure": true,
-                      "lValueRequested": false,
-                      "memberName": "SHIPPED",
-                      "nodeType": "MemberAccess",
-                      "referencedDeclaration": null,
-                      "src": "452:22:1",
-                      "typeDescriptions": {
-                        "typeIdentifier": "t_enum$_ShippingStatus_$22",
-                        "typeString": "enum MartketPlace.ShippingStatus"
-                      }
-                    },
-                    "src": "443:31:1",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_enum$_ShippingStatus_$22",
-                      "typeString": "enum MartketPlace.ShippingStatus"
-                    }
-                  },
-                  "id": 64,
-                  "nodeType": "ExpressionStatement",
-                  "src": "443:31:1"
-                }
-              ]
-            },
-            "documentation": null,
-            "id": 66,
-            "implemented": true,
-            "kind": "function",
-            "modifiers": [],
-            "name": "Shipped",
-            "nodeType": "FunctionDefinition",
-            "parameters": {
-              "id": 51,
-              "nodeType": "ParameterList",
-              "parameters": [],
-              "src": "385:2:1"
-            },
-            "returnParameters": {
-              "id": 52,
-              "nodeType": "ParameterList",
-              "parameters": [],
-              "src": "395:0:1"
-            },
-            "scope": 116,
-            "src": "369:112:1",
-            "stateMutability": "nonpayable",
-            "superFunction": null,
-            "visibility": "public"
-          },
-          {
-            "body": {
-              "id": 84,
-              "nodeType": "Block",
-              "src": "515:120:1",
-              "statements": [
-                {
-                  "expression": {
-                    "argumentTypes": null,
-                    "arguments": [
-                      {
-                        "argumentTypes": null,
-                        "commonType": {
-                          "typeIdentifier": "t_address",
-                          "typeString": "address"
-                        },
-                        "id": 73,
-                        "isConstant": false,
-                        "isLValue": false,
-                        "isPure": false,
-                        "lValueRequested": false,
-                        "leftExpression": {
-                          "argumentTypes": null,
-                          "expression": {
-                            "argumentTypes": null,
-                            "id": 70,
-                            "name": "msg",
-                            "nodeType": "Identifier",
-                            "overloadedDeclarations": [],
-                            "referencedDeclaration": 284,
-                            "src": "533:3:1",
-                            "typeDescriptions": {
-                              "typeIdentifier": "t_magic_message",
-                              "typeString": "msg"
-                            }
-                          },
-                          "id": 71,
-                          "isConstant": false,
-                          "isLValue": false,
-                          "isPure": false,
-                          "lValueRequested": false,
-                          "memberName": "sender",
-                          "nodeType": "MemberAccess",
-                          "referencedDeclaration": null,
-                          "src": "533:10:1",
-                          "typeDescriptions": {
-                            "typeIdentifier": "t_address_payable",
-                            "typeString": "address payable"
-                          }
-                        },
-                        "nodeType": "BinaryOperation",
-                        "operator": "==",
-                        "rightExpression": {
-                          "argumentTypes": null,
-                          "id": 72,
-                          "name": "owner",
-                          "nodeType": "Identifier",
-                          "overloadedDeclarations": [],
-                          "referencedDeclaration": 26,
-                          "src": "547:5:1",
-                          "typeDescriptions": {
-                            "typeIdentifier": "t_address",
-                            "typeString": "address"
-                          }
-                        },
-                        "src": "533:19:1",
-                        "typeDescriptions": {
-                          "typeIdentifier": "t_bool",
-                          "typeString": "bool"
-                        }
-                      }
-                    ],
-                    "expression": {
-                      "argumentTypes": [
-                        {
-                          "typeIdentifier": "t_bool",
-                          "typeString": "bool"
-                        }
-                      ],
-                      "id": 69,
-                      "name": "require",
-                      "nodeType": "Identifier",
-                      "overloadedDeclarations": [
-                        287,
-                        288
-                      ],
-                      "referencedDeclaration": 287,
-                      "src": "525:7:1",
-                      "typeDescriptions": {
-                        "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
-                        "typeString": "function (bool) pure"
-                      }
-                    },
-                    "id": 74,
-                    "isConstant": false,
-                    "isLValue": false,
-                    "isPure": false,
-                    "kind": "functionCall",
-                    "lValueRequested": false,
-                    "names": [],
-                    "nodeType": "FunctionCall",
-                    "src": "525:28:1",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_tuple$__$",
-                      "typeString": "tuple()"
-                    }
-                  },
-                  "id": 75,
-                  "nodeType": "ExpressionStatement",
-                  "src": "525:28:1"
-                },
-                {
-                  "expression": {
-                    "argumentTypes": null,
-                    "id": 79,
-                    "isConstant": false,
-                    "isLValue": false,
-                    "isPure": false,
-                    "lValueRequested": false,
-                    "leftHandSide": {
-                      "argumentTypes": null,
-                      "id": 76,
-                      "name": "status",
-                      "nodeType": "Identifier",
-                      "overloadedDeclarations": [],
-                      "referencedDeclaration": 24,
-                      "src": "563:6:1",
-                      "typeDescriptions": {
-                        "typeIdentifier": "t_enum$_ShippingStatus_$22",
-                        "typeString": "enum MartketPlace.ShippingStatus"
-                      }
-                    },
-                    "nodeType": "Assignment",
-                    "operator": "=",
-                    "rightHandSide": {
-                      "argumentTypes": null,
-                      "expression": {
-                        "argumentTypes": null,
-                        "id": 77,
-                        "name": "ShippingStatus",
-                        "nodeType": "Identifier",
-                        "overloadedDeclarations": [],
-                        "referencedDeclaration": 22,
-                        "src": "572:14:1",
-                        "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_enum$_ShippingStatus_$22_$",
-                          "typeString": "type(enum MartketPlace.ShippingStatus)"
-                        }
-                      },
-                      "id": 78,
+                      "id": 63,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -823,21 +897,21 @@
                       "memberName": "DELIVERED",
                       "nodeType": "MemberAccess",
                       "referencedDeclaration": null,
-                      "src": "572:24:1",
+                      "src": "1086:24:0",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_enum$_ShippingStatus_$22",
+                        "typeIdentifier": "t_enum$_ShippingStatus_$5",
                         "typeString": "enum MartketPlace.ShippingStatus"
                       }
                     },
-                    "src": "563:33:1",
+                    "src": "1077:33:0",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_enum$_ShippingStatus_$22",
+                      "typeIdentifier": "t_enum$_ShippingStatus_$5",
                       "typeString": "enum MartketPlace.ShippingStatus"
                     }
                   },
-                  "id": 80,
+                  "id": 65,
                   "nodeType": "ExpressionStatement",
-                  "src": "563:33:1"
+                  "src": "1077:33:0"
                 },
                 {
                   "eventCall": {
@@ -845,18 +919,18 @@
                     "arguments": [],
                     "expression": {
                       "argumentTypes": [],
-                      "id": 81,
+                      "id": 66,
                       "name": "MissionComplete",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 30,
-                      "src": "611:15:1",
+                      "referencedDeclaration": 13,
+                      "src": "1125:15:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_event_nonpayable$__$returns$__$",
                         "typeString": "function ()"
                       }
                     },
-                    "id": 82,
+                    "id": 67,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -864,48 +938,48 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "611:17:1",
+                    "src": "1125:17:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 83,
+                  "id": 68,
                   "nodeType": "EmitStatement",
-                  "src": "606:22:1"
+                  "src": "1120:22:0"
                 }
               ]
             },
             "documentation": null,
-            "id": 85,
+            "id": 70,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "Delivered",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 67,
+              "id": 51,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "505:2:1"
+              "src": "948:2:0"
             },
             "returnParameters": {
-              "id": 68,
+              "id": 52,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "515:0:1"
+              "src": "958:0:0"
             },
-            "scope": 116,
-            "src": "487:148:1",
+            "scope": 124,
+            "src": "930:219:0",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           },
           {
             "body": {
-              "id": 99,
+              "id": 85,
               "nodeType": "Block",
-              "src": "697:70:1",
+              "src": "1230:142:0",
               "statements": [
                 {
                   "expression": {
@@ -917,7 +991,7 @@
                           "typeIdentifier": "t_address",
                           "typeString": "address"
                         },
-                        "id": 94,
+                        "id": 79,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -926,18 +1000,18 @@
                           "argumentTypes": null,
                           "expression": {
                             "argumentTypes": null,
-                            "id": 91,
+                            "id": 76,
                             "name": "msg",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 284,
-                            "src": "715:3:1",
+                            "referencedDeclaration": 139,
+                            "src": "1248:3:0",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_message",
                               "typeString": "msg"
                             }
                           },
-                          "id": 92,
+                          "id": 77,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -945,7 +1019,7 @@
                           "memberName": "sender",
                           "nodeType": "MemberAccess",
                           "referencedDeclaration": null,
-                          "src": "715:10:1",
+                          "src": "1248:10:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_address_payable",
                             "typeString": "address payable"
@@ -955,22 +1029,40 @@
                         "operator": "==",
                         "rightExpression": {
                           "argumentTypes": null,
-                          "id": 93,
+                          "id": 78,
                           "name": "owner",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 26,
-                          "src": "729:5:1",
+                          "referencedDeclaration": 9,
+                          "src": "1262:5:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_address",
                             "typeString": "address"
                           }
                         },
-                        "src": "715:19:1",
+                        "src": "1248:19:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_bool",
                           "typeString": "bool"
                         }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "546869732066756e6374696f6e206973207265737472696374656420746f2074686520636f6e74726163742773206f776e6572",
+                        "id": 80,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "1286:53:0",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_f60fe2d9d123295bf92ecf95167f1fa709e374da35e4c083bd39dc2d82acd8b1",
+                          "typeString": "literal_string \"This function is restricted to the contract's owner\""
+                        },
+                        "value": "This function is restricted to the contract's owner"
                       }
                     ],
                     "expression": {
@@ -978,23 +1070,27 @@
                         {
                           "typeIdentifier": "t_bool",
                           "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_stringliteral_f60fe2d9d123295bf92ecf95167f1fa709e374da35e4c083bd39dc2d82acd8b1",
+                          "typeString": "literal_string \"This function is restricted to the contract's owner\""
                         }
                       ],
-                      "id": 90,
+                      "id": 75,
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        287,
-                        288
+                        142,
+                        143
                       ],
-                      "referencedDeclaration": 287,
-                      "src": "707:7:1",
+                      "referencedDeclaration": 143,
+                      "src": "1240:7:0",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
-                        "typeString": "function (bool) pure"
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (bool,string memory) pure"
                       }
                     },
-                    "id": 95,
+                    "id": 81,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1002,76 +1098,76 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "707:28:1",
+                    "src": "1240:100:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 96,
+                  "id": 82,
                   "nodeType": "ExpressionStatement",
-                  "src": "707:28:1"
+                  "src": "1240:100:0"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 97,
+                    "id": 83,
                     "name": "status",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 24,
-                    "src": "754:6:1",
+                    "referencedDeclaration": 7,
+                    "src": "1359:6:0",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_enum$_ShippingStatus_$22",
+                      "typeIdentifier": "t_enum$_ShippingStatus_$5",
                       "typeString": "enum MartketPlace.ShippingStatus"
                     }
                   },
-                  "functionReturnParameters": 89,
-                  "id": 98,
+                  "functionReturnParameters": 74,
+                  "id": 84,
                   "nodeType": "Return",
-                  "src": "747:13:1"
+                  "src": "1352:13:0"
                 }
               ]
             },
             "documentation": null,
-            "id": 100,
+            "id": 86,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "getStatus",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 86,
+              "id": 71,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "659:2:1"
+              "src": "1192:2:0"
             },
             "returnParameters": {
-              "id": 89,
+              "id": 74,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 88,
+                  "id": 73,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 100,
-                  "src": "682:14:1",
+                  "scope": 86,
+                  "src": "1215:14:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_enum$_ShippingStatus_$22",
+                    "typeIdentifier": "t_enum$_ShippingStatus_$5",
                     "typeString": "enum MartketPlace.ShippingStatus"
                   },
                   "typeName": {
                     "contractScope": null,
-                    "id": 87,
+                    "id": 72,
                     "name": "ShippingStatus",
                     "nodeType": "UserDefinedTypeName",
-                    "referencedDeclaration": 22,
-                    "src": "682:14:1",
+                    "referencedDeclaration": 5,
+                    "src": "1215:14:0",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_enum$_ShippingStatus_$22",
+                      "typeIdentifier": "t_enum$_ShippingStatus_$5",
                       "typeString": "enum MartketPlace.ShippingStatus"
                     }
                   },
@@ -1079,19 +1175,19 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "681:16:1"
+              "src": "1214:16:0"
             },
-            "scope": 116,
-            "src": "641:126:1",
+            "scope": 124,
+            "src": "1174:198:0",
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "public"
           },
           {
             "body": {
-              "id": 114,
+              "id": 111,
               "nodeType": "Block",
-              "src": "826:68:1",
+              "src": "1449:174:0",
               "statements": [
                 {
                   "expression": {
@@ -1103,7 +1199,7 @@
                           "typeIdentifier": "t_address",
                           "typeString": "address"
                         },
-                        "id": 109,
+                        "id": 95,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -1112,18 +1208,18 @@
                           "argumentTypes": null,
                           "expression": {
                             "argumentTypes": null,
-                            "id": 106,
+                            "id": 92,
                             "name": "msg",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 284,
-                            "src": "844:3:1",
+                            "referencedDeclaration": 139,
+                            "src": "1467:3:0",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_message",
                               "typeString": "msg"
                             }
                           },
-                          "id": 107,
+                          "id": 93,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -1131,28 +1227,213 @@
                           "memberName": "sender",
                           "nodeType": "MemberAccess",
                           "referencedDeclaration": null,
-                          "src": "844:10:1",
+                          "src": "1467:10:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_address_payable",
                             "typeString": "address payable"
                           }
                         },
                         "nodeType": "BinaryOperation",
-                        "operator": "!=",
+                        "operator": "==",
                         "rightExpression": {
                           "argumentTypes": null,
-                          "id": 108,
-                          "name": "owner",
+                          "id": 94,
+                          "name": "customer",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 26,
-                          "src": "858:5:1",
+                          "referencedDeclaration": 11,
+                          "src": "1481:8:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_address",
                             "typeString": "address"
                           }
                         },
-                        "src": "844:19:1",
+                        "src": "1467:22:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "546869732066756e6374696f6e206973207265737472696374656420746f2074686520636f6e7472616374277320637573746f6d6572",
+                        "id": 96,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "1491:56:0",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_09e1e2a8ffde09dc0811be7f93ab83bde74771023b905e53623fd4fe9997fdd5",
+                          "typeString": "literal_string \"This function is restricted to the contract's customer\""
+                        },
+                        "value": "This function is restricted to the contract's customer"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_stringliteral_09e1e2a8ffde09dc0811be7f93ab83bde74771023b905e53623fd4fe9997fdd5",
+                          "typeString": "literal_string \"This function is restricted to the contract's customer\""
+                        }
+                      ],
+                      "id": 91,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        142,
+                        143
+                      ],
+                      "referencedDeclaration": 143,
+                      "src": "1459:7:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (bool,string memory) pure"
+                      }
+                    },
+                    "id": 97,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1459:89:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 98,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1459:89:0"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        "id": 106,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "expression": {
+                            "argumentTypes": null,
+                            "id": 100,
+                            "name": "msg",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 139,
+                            "src": "1566:3:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_magic_message",
+                              "typeString": "msg"
+                            }
+                          },
+                          "id": 101,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "value",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": null,
+                          "src": "1566:9:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "==",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "commonType": {
+                            "typeIdentifier": "t_rational_1_by_1",
+                            "typeString": "int_const 1"
+                          },
+                          "id": 105,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "lValueRequested": false,
+                          "leftExpression": {
+                            "argumentTypes": null,
+                            "hexValue": "31",
+                            "id": 102,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "kind": "number",
+                            "lValueRequested": false,
+                            "nodeType": "Literal",
+                            "src": "1579:1:0",
+                            "subdenomination": null,
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_rational_1_by_1",
+                              "typeString": "int_const 1"
+                            },
+                            "value": "1"
+                          },
+                          "nodeType": "BinaryOperation",
+                          "operator": "**",
+                          "rightExpression": {
+                            "argumentTypes": null,
+                            "id": 104,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "lValueRequested": false,
+                            "nodeType": "UnaryOperation",
+                            "operator": "-",
+                            "prefix": true,
+                            "src": "1584:8:0",
+                            "subExpression": {
+                              "argumentTypes": null,
+                              "hexValue": "35",
+                              "id": 103,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "kind": "number",
+                              "lValueRequested": false,
+                              "nodeType": "Literal",
+                              "src": "1585:7:0",
+                              "subdenomination": "ether",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_rational_5000000000000000000_by_1",
+                                "typeString": "int_const 5000000000000000000"
+                              },
+                              "value": "5"
+                            },
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_rational_minus_5000000000000000000_by_1",
+                              "typeString": "int_const -5000000000000000000"
+                            }
+                          },
+                          "src": "1579:13:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_rational_1_by_1",
+                            "typeString": "int_const 1"
+                          }
+                        },
+                        "src": "1566:26:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_bool",
                           "typeString": "bool"
@@ -1166,21 +1447,21 @@
                           "typeString": "bool"
                         }
                       ],
-                      "id": 105,
+                      "id": 99,
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        287,
-                        288
+                        142,
+                        143
                       ],
-                      "referencedDeclaration": 287,
-                      "src": "836:7:1",
+                      "referencedDeclaration": 142,
+                      "src": "1558:7:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
                         "typeString": "function (bool) pure"
                       }
                     },
-                    "id": 110,
+                    "id": 107,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1188,76 +1469,76 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "836:28:1",
+                    "src": "1558:35:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 111,
+                  "id": 108,
                   "nodeType": "ExpressionStatement",
-                  "src": "836:28:1"
+                  "src": "1558:35:0"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 112,
+                    "id": 109,
                     "name": "status",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 24,
-                    "src": "881:6:1",
+                    "referencedDeclaration": 7,
+                    "src": "1610:6:0",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_enum$_ShippingStatus_$22",
+                      "typeIdentifier": "t_enum$_ShippingStatus_$5",
                       "typeString": "enum MartketPlace.ShippingStatus"
                     }
                   },
-                  "functionReturnParameters": 104,
-                  "id": 113,
+                  "functionReturnParameters": 90,
+                  "id": 110,
                   "nodeType": "Return",
-                  "src": "874:13:1"
+                  "src": "1603:13:0"
                 }
               ]
             },
             "documentation": null,
-            "id": 115,
+            "id": 112,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "Status",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 101,
+              "id": 87,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "788:2:1"
+              "src": "1408:2:0"
             },
             "returnParameters": {
-              "id": 104,
+              "id": 90,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 103,
+                  "id": 89,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 115,
-                  "src": "811:14:1",
+                  "scope": 112,
+                  "src": "1434:14:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_enum$_ShippingStatus_$22",
+                    "typeIdentifier": "t_enum$_ShippingStatus_$5",
                     "typeString": "enum MartketPlace.ShippingStatus"
                   },
                   "typeName": {
                     "contractScope": null,
-                    "id": 102,
+                    "id": 88,
                     "name": "ShippingStatus",
                     "nodeType": "UserDefinedTypeName",
-                    "referencedDeclaration": 22,
-                    "src": "811:14:1",
+                    "referencedDeclaration": 5,
+                    "src": "1434:14:0",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_enum$_ShippingStatus_$22",
+                      "typeIdentifier": "t_enum$_ShippingStatus_$5",
                       "typeString": "enum MartketPlace.ShippingStatus"
                     }
                   },
@@ -1265,27 +1546,160 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "810:16:1"
+              "src": "1433:16:0"
             },
-            "scope": 116,
-            "src": "773:121:1",
-            "stateMutability": "view",
+            "scope": 124,
+            "src": "1393:230:0",
+            "stateMutability": "payable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 122,
+              "nodeType": "Block",
+              "src": "1756:45:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "expression": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "id": 118,
+                          "name": "this",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 153,
+                          "src": "1781:4:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_contract$_MartketPlace_$124",
+                            "typeString": "contract MartketPlace"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_contract$_MartketPlace_$124",
+                            "typeString": "contract MartketPlace"
+                          }
+                        ],
+                        "id": 117,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "lValueRequested": false,
+                        "nodeType": "ElementaryTypeNameExpression",
+                        "src": "1773:7:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_address_$",
+                          "typeString": "type(address)"
+                        },
+                        "typeName": "address"
+                      },
+                      "id": 119,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "typeConversion",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "1773:13:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "id": 120,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "memberName": "balance",
+                    "nodeType": "MemberAccess",
+                    "referencedDeclaration": null,
+                    "src": "1773:21:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 116,
+                  "id": 121,
+                  "nodeType": "Return",
+                  "src": "1766:28:0"
+                }
+              ]
+            },
+            "documentation": "Fonction test pour savoir si on arrive a avoir le balance",
+            "id": 123,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "cell",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 113,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1723:2:0"
+            },
+            "returnParameters": {
+              "id": 116,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 115,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 123,
+                  "src": "1750:4:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 114,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1750:4:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1749:6:0"
+            },
+            "scope": 124,
+            "src": "1710:91:0",
+            "stateMutability": "payable",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 117,
-        "src": "34:863:1"
+        "scope": 125,
+        "src": "66:1930:0"
       }
     ],
-    "src": "0:907:1"
+    "src": "32:1974:0"
   },
   "legacyAST": {
     "attributes": {
       "absolutePath": "project:/contracts/MarketPlace.sol",
       "exportedSymbols": {
         "MartketPlace": [
-          116
+          124
         ]
       }
     },
@@ -1302,9 +1716,9 @@
             ".0"
           ]
         },
-        "id": 18,
+        "id": 1,
         "name": "PragmaDirective",
-        "src": "0:32:1"
+        "src": "32:32:0"
       },
       {
         "attributes": {
@@ -1318,10 +1732,10 @@
           "documentation": null,
           "fullyImplemented": true,
           "linearizedBaseContracts": [
-            116
+            124
           ],
           "name": "MartketPlace",
-          "scope": 117
+          "scope": 125
         },
         "children": [
           {
@@ -1334,36 +1748,36 @@
                 "attributes": {
                   "name": "PENDING"
                 },
-                "id": 19,
+                "id": 2,
                 "name": "EnumValue",
-                "src": "82:7:1"
+                "src": "116:7:0"
               },
               {
                 "attributes": {
                   "name": "SHIPPED"
                 },
-                "id": 20,
+                "id": 3,
                 "name": "EnumValue",
-                "src": "91:7:1"
+                "src": "125:7:0"
               },
               {
                 "attributes": {
                   "name": "DELIVERED"
                 },
-                "id": 21,
+                "id": 4,
                 "name": "EnumValue",
-                "src": "100:9:1"
+                "src": "134:9:0"
               }
             ],
-            "id": 22,
+            "id": 5,
             "name": "EnumDefinition",
-            "src": "61:50:1"
+            "src": "95:50:0"
           },
           {
             "attributes": {
               "constant": false,
               "name": "status",
-              "scope": 116,
+              "scope": 124,
               "stateVariable": true,
               "storageLocation": "default",
               "type": "enum MartketPlace.ShippingStatus",
@@ -1375,28 +1789,28 @@
                 "attributes": {
                   "contractScope": null,
                   "name": "ShippingStatus",
-                  "referencedDeclaration": 22,
+                  "referencedDeclaration": 5,
                   "type": "enum MartketPlace.ShippingStatus"
                 },
-                "id": 23,
+                "id": 6,
                 "name": "UserDefinedTypeName",
-                "src": "116:14:1"
+                "src": "150:14:0"
               }
             ],
-            "id": 24,
+            "id": 7,
             "name": "VariableDeclaration",
-            "src": "116:21:1"
+            "src": "150:21:0"
           },
           {
             "attributes": {
               "constant": false,
               "name": "owner",
-              "scope": 116,
+              "scope": 124,
               "stateVariable": true,
               "storageLocation": "default",
               "type": "address",
               "value": null,
-              "visibility": "internal"
+              "visibility": "public"
             },
             "children": [
               {
@@ -1405,20 +1819,20 @@
                   "stateMutability": "nonpayable",
                   "type": "address"
                 },
-                "id": 25,
+                "id": 8,
                 "name": "ElementaryTypeName",
-                "src": "143:7:1"
+                "src": "177:7:0"
               }
             ],
-            "id": 26,
+            "id": 9,
             "name": "VariableDeclaration",
-            "src": "143:13:1"
+            "src": "177:20:0"
           },
           {
             "attributes": {
               "constant": false,
               "name": "customer",
-              "scope": 116,
+              "scope": 124,
               "stateVariable": true,
               "storageLocation": "default",
               "type": "address",
@@ -1432,14 +1846,14 @@
                   "stateMutability": "nonpayable",
                   "type": "address"
                 },
-                "id": 27,
+                "id": 10,
                 "name": "ElementaryTypeName",
-                "src": "162:7:1"
+                "src": "203:7:0"
               }
             ],
-            "id": 28,
+            "id": 11,
             "name": "VariableDeclaration",
-            "src": "162:16:1"
+            "src": "203:16:0"
           },
           {
             "attributes": {
@@ -1455,14 +1869,14 @@
                   ]
                 },
                 "children": [],
-                "id": 29,
+                "id": 12,
                 "name": "ParameterList",
-                "src": "206:2:1"
+                "src": "246:2:0"
               }
             ],
-            "id": 30,
+            "id": 13,
             "name": "EventDefinition",
-            "src": "185:24:1"
+            "src": "225:24:0"
           },
           {
             "attributes": {
@@ -1474,7 +1888,7 @@
                 null
               ],
               "name": "",
-              "scope": 116,
+              "scope": 124,
               "stateMutability": "nonpayable",
               "superFunction": null,
               "visibility": "public"
@@ -1486,7 +1900,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "_customer",
-                      "scope": 50,
+                      "scope": 33,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "address",
@@ -1500,19 +1914,19 @@
                           "stateMutability": "nonpayable",
                           "type": "address"
                         },
-                        "id": 31,
+                        "id": 14,
                         "name": "ElementaryTypeName",
-                        "src": "231:7:1"
+                        "src": "393:7:0"
                       }
                     ],
-                    "id": 32,
+                    "id": 15,
                     "name": "VariableDeclaration",
-                    "src": "231:17:1"
+                    "src": "393:17:0"
                   }
                 ],
-                "id": 33,
+                "id": 16,
                 "name": "ParameterList",
-                "src": "230:19:1"
+                "src": "392:19:0"
               },
               {
                 "attributes": {
@@ -1521,9 +1935,9 @@
                   ]
                 },
                 "children": [],
-                "id": 34,
+                "id": 17,
                 "name": "ParameterList",
-                "src": "257:0:1"
+                "src": "419:0:0"
               },
               {
                 "children": [
@@ -1546,13 +1960,13 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 26,
+                              "referencedDeclaration": 9,
                               "type": "address",
                               "value": "owner"
                             },
-                            "id": 35,
+                            "id": 18,
                             "name": "Identifier",
-                            "src": "267:5:1"
+                            "src": "429:5:0"
                           },
                           {
                             "attributes": {
@@ -1572,28 +1986,28 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 284,
+                                  "referencedDeclaration": 139,
                                   "type": "msg",
                                   "value": "msg"
                                 },
-                                "id": 36,
+                                "id": 19,
                                 "name": "Identifier",
-                                "src": "275:3:1"
+                                "src": "437:3:0"
                               }
                             ],
-                            "id": 37,
+                            "id": 20,
                             "name": "MemberAccess",
-                            "src": "275:10:1"
+                            "src": "437:10:0"
                           }
                         ],
-                        "id": 38,
+                        "id": 21,
                         "name": "Assignment",
-                        "src": "267:18:1"
+                        "src": "429:18:0"
                       }
                     ],
-                    "id": 39,
+                    "id": 22,
                     "name": "ExpressionStatement",
-                    "src": "267:18:1"
+                    "src": "429:18:0"
                   },
                   {
                     "children": [
@@ -1614,13 +2028,13 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 28,
+                              "referencedDeclaration": 11,
                               "type": "address",
                               "value": "customer"
                             },
-                            "id": 40,
+                            "id": 23,
                             "name": "Identifier",
-                            "src": "295:8:1"
+                            "src": "457:8:0"
                           },
                           {
                             "attributes": {
@@ -1628,23 +2042,23 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 32,
+                              "referencedDeclaration": 15,
                               "type": "address",
                               "value": "_customer"
                             },
-                            "id": 41,
+                            "id": 24,
                             "name": "Identifier",
-                            "src": "306:9:1"
+                            "src": "468:9:0"
                           }
                         ],
-                        "id": 42,
+                        "id": 25,
                         "name": "Assignment",
-                        "src": "295:20:1"
+                        "src": "457:20:0"
                       }
                     ],
-                    "id": 43,
+                    "id": 26,
                     "name": "ExpressionStatement",
-                    "src": "295:20:1"
+                    "src": "457:20:0"
                   },
                   {
                     "children": [
@@ -1665,13 +2079,13 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 24,
+                              "referencedDeclaration": 7,
                               "type": "enum MartketPlace.ShippingStatus",
                               "value": "status"
                             },
-                            "id": 44,
+                            "id": 27,
                             "name": "Identifier",
-                            "src": "325:6:1"
+                            "src": "487:6:0"
                           },
                           {
                             "attributes": {
@@ -1691,38 +2105,38 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 22,
+                                  "referencedDeclaration": 5,
                                   "type": "type(enum MartketPlace.ShippingStatus)",
                                   "value": "ShippingStatus"
                                 },
-                                "id": 45,
+                                "id": 28,
                                 "name": "Identifier",
-                                "src": "334:14:1"
+                                "src": "496:14:0"
                               }
                             ],
-                            "id": 46,
+                            "id": 29,
                             "name": "MemberAccess",
-                            "src": "334:22:1"
+                            "src": "496:22:0"
                           }
                         ],
-                        "id": 47,
+                        "id": 30,
                         "name": "Assignment",
-                        "src": "325:31:1"
+                        "src": "487:31:0"
                       }
                     ],
-                    "id": 48,
+                    "id": 31,
                     "name": "ExpressionStatement",
-                    "src": "325:31:1"
+                    "src": "487:31:0"
                   }
                 ],
-                "id": 49,
+                "id": 32,
                 "name": "Block",
-                "src": "257:106:1"
+                "src": "419:106:0"
               }
             ],
-            "id": 50,
+            "id": 33,
             "name": "FunctionDefinition",
-            "src": "219:144:1"
+            "src": "381:144:0"
           },
           {
             "attributes": {
@@ -1734,7 +2148,7 @@
                 null
               ],
               "name": "Shipped",
-              "scope": 116,
+              "scope": 124,
               "stateMutability": "nonpayable",
               "superFunction": null,
               "visibility": "public"
@@ -1747,9 +2161,9 @@
                   ]
                 },
                 "children": [],
-                "id": 51,
+                "id": 34,
                 "name": "ParameterList",
-                "src": "385:2:1"
+                "src": "606:2:0"
               },
               {
                 "attributes": {
@@ -1758,9 +2172,9 @@
                   ]
                 },
                 "children": [],
-                "id": 52,
+                "id": 35,
                 "name": "ParameterList",
-                "src": "395:0:1"
+                "src": "616:0:0"
               },
               {
                 "children": [
@@ -1787,19 +2201,23 @@
                                 {
                                   "typeIdentifier": "t_bool",
                                   "typeString": "bool"
+                                },
+                                {
+                                  "typeIdentifier": "t_stringliteral_f60fe2d9d123295bf92ecf95167f1fa709e374da35e4c083bd39dc2d82acd8b1",
+                                  "typeString": "literal_string \"This function is restricted to the contract's owner\""
                                 }
                               ],
                               "overloadedDeclarations": [
-                                287,
-                                288
+                                142,
+                                143
                               ],
-                              "referencedDeclaration": 287,
-                              "type": "function (bool) pure",
+                              "referencedDeclaration": 143,
+                              "type": "function (bool,string memory) pure",
                               "value": "require"
                             },
-                            "id": 53,
+                            "id": 36,
                             "name": "Identifier",
-                            "src": "405:7:1"
+                            "src": "626:7:0"
                           },
                           {
                             "attributes": {
@@ -1834,18 +2252,18 @@
                                       "overloadedDeclarations": [
                                         null
                                       ],
-                                      "referencedDeclaration": 284,
+                                      "referencedDeclaration": 139,
                                       "type": "msg",
                                       "value": "msg"
                                     },
-                                    "id": 54,
+                                    "id": 37,
                                     "name": "Identifier",
-                                    "src": "413:3:1"
+                                    "src": "634:3:0"
                                   }
                                 ],
-                                "id": 55,
+                                "id": 38,
                                 "name": "MemberAccess",
-                                "src": "413:10:1"
+                                "src": "634:10:0"
                               },
                               {
                                 "attributes": {
@@ -1853,28 +2271,45 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 26,
+                                  "referencedDeclaration": 9,
                                   "type": "address",
                                   "value": "owner"
                                 },
-                                "id": 56,
+                                "id": 39,
                                 "name": "Identifier",
-                                "src": "427:5:1"
+                                "src": "648:5:0"
                               }
                             ],
-                            "id": 57,
+                            "id": 40,
                             "name": "BinaryOperation",
-                            "src": "413:19:1"
+                            "src": "634:19:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "hexvalue": "546869732066756e6374696f6e206973207265737472696374656420746f2074686520636f6e74726163742773206f776e6572",
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "subdenomination": null,
+                              "token": "string",
+                              "type": "literal_string \"This function is restricted to the contract's owner\"",
+                              "value": "This function is restricted to the contract's owner"
+                            },
+                            "id": 41,
+                            "name": "Literal",
+                            "src": "671:53:0"
                           }
                         ],
-                        "id": 58,
+                        "id": 42,
                         "name": "FunctionCall",
-                        "src": "405:28:1"
+                        "src": "626:99:0"
                       }
                     ],
-                    "id": 59,
+                    "id": 43,
                     "name": "ExpressionStatement",
-                    "src": "405:28:1"
+                    "src": "626:99:0"
                   },
                   {
                     "children": [
@@ -1895,13 +2330,13 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 24,
+                              "referencedDeclaration": 7,
                               "type": "enum MartketPlace.ShippingStatus",
                               "value": "status"
                             },
-                            "id": 60,
+                            "id": 44,
                             "name": "Identifier",
-                            "src": "443:6:1"
+                            "src": "735:6:0"
                           },
                           {
                             "attributes": {
@@ -1921,38 +2356,38 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 22,
+                                  "referencedDeclaration": 5,
                                   "type": "type(enum MartketPlace.ShippingStatus)",
                                   "value": "ShippingStatus"
                                 },
-                                "id": 61,
+                                "id": 45,
                                 "name": "Identifier",
-                                "src": "452:14:1"
+                                "src": "744:14:0"
                               }
                             ],
-                            "id": 62,
+                            "id": 46,
                             "name": "MemberAccess",
-                            "src": "452:22:1"
+                            "src": "744:22:0"
                           }
                         ],
-                        "id": 63,
+                        "id": 47,
                         "name": "Assignment",
-                        "src": "443:31:1"
+                        "src": "735:31:0"
                       }
                     ],
-                    "id": 64,
+                    "id": 48,
                     "name": "ExpressionStatement",
-                    "src": "443:31:1"
+                    "src": "735:31:0"
                   }
                 ],
-                "id": 65,
+                "id": 49,
                 "name": "Block",
-                "src": "395:86:1"
+                "src": "616:157:0"
               }
             ],
-            "id": 66,
+            "id": 50,
             "name": "FunctionDefinition",
-            "src": "369:112:1"
+            "src": "590:183:0"
           },
           {
             "attributes": {
@@ -1964,7 +2399,7 @@
                 null
               ],
               "name": "Delivered",
-              "scope": 116,
+              "scope": 124,
               "stateMutability": "nonpayable",
               "superFunction": null,
               "visibility": "public"
@@ -1977,9 +2412,9 @@
                   ]
                 },
                 "children": [],
-                "id": 67,
+                "id": 51,
                 "name": "ParameterList",
-                "src": "505:2:1"
+                "src": "948:2:0"
               },
               {
                 "attributes": {
@@ -1988,9 +2423,9 @@
                   ]
                 },
                 "children": [],
-                "id": 68,
+                "id": 52,
                 "name": "ParameterList",
-                "src": "515:0:1"
+                "src": "958:0:0"
               },
               {
                 "children": [
@@ -2017,19 +2452,23 @@
                                 {
                                   "typeIdentifier": "t_bool",
                                   "typeString": "bool"
+                                },
+                                {
+                                  "typeIdentifier": "t_stringliteral_f60fe2d9d123295bf92ecf95167f1fa709e374da35e4c083bd39dc2d82acd8b1",
+                                  "typeString": "literal_string \"This function is restricted to the contract's owner\""
                                 }
                               ],
                               "overloadedDeclarations": [
-                                287,
-                                288
+                                142,
+                                143
                               ],
-                              "referencedDeclaration": 287,
-                              "type": "function (bool) pure",
+                              "referencedDeclaration": 143,
+                              "type": "function (bool,string memory) pure",
                               "value": "require"
                             },
-                            "id": 69,
+                            "id": 53,
                             "name": "Identifier",
-                            "src": "525:7:1"
+                            "src": "968:7:0"
                           },
                           {
                             "attributes": {
@@ -2064,18 +2503,18 @@
                                       "overloadedDeclarations": [
                                         null
                                       ],
-                                      "referencedDeclaration": 284,
+                                      "referencedDeclaration": 139,
                                       "type": "msg",
                                       "value": "msg"
                                     },
-                                    "id": 70,
+                                    "id": 54,
                                     "name": "Identifier",
-                                    "src": "533:3:1"
+                                    "src": "976:3:0"
                                   }
                                 ],
-                                "id": 71,
+                                "id": 55,
                                 "name": "MemberAccess",
-                                "src": "533:10:1"
+                                "src": "976:10:0"
                               },
                               {
                                 "attributes": {
@@ -2083,28 +2522,45 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 26,
+                                  "referencedDeclaration": 9,
                                   "type": "address",
                                   "value": "owner"
                                 },
-                                "id": 72,
+                                "id": 56,
                                 "name": "Identifier",
-                                "src": "547:5:1"
+                                "src": "990:5:0"
                               }
                             ],
-                            "id": 73,
+                            "id": 57,
                             "name": "BinaryOperation",
-                            "src": "533:19:1"
+                            "src": "976:19:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "hexvalue": "546869732066756e6374696f6e206973207265737472696374656420746f2074686520636f6e74726163742773206f776e6572",
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "subdenomination": null,
+                              "token": "string",
+                              "type": "literal_string \"This function is restricted to the contract's owner\"",
+                              "value": "This function is restricted to the contract's owner"
+                            },
+                            "id": 58,
+                            "name": "Literal",
+                            "src": "1013:53:0"
                           }
                         ],
-                        "id": 74,
+                        "id": 59,
                         "name": "FunctionCall",
-                        "src": "525:28:1"
+                        "src": "968:99:0"
                       }
                     ],
-                    "id": 75,
+                    "id": 60,
                     "name": "ExpressionStatement",
-                    "src": "525:28:1"
+                    "src": "968:99:0"
                   },
                   {
                     "children": [
@@ -2125,13 +2581,13 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 24,
+                              "referencedDeclaration": 7,
                               "type": "enum MartketPlace.ShippingStatus",
                               "value": "status"
                             },
-                            "id": 76,
+                            "id": 61,
                             "name": "Identifier",
-                            "src": "563:6:1"
+                            "src": "1077:6:0"
                           },
                           {
                             "attributes": {
@@ -2151,28 +2607,28 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 22,
+                                  "referencedDeclaration": 5,
                                   "type": "type(enum MartketPlace.ShippingStatus)",
                                   "value": "ShippingStatus"
                                 },
-                                "id": 77,
+                                "id": 62,
                                 "name": "Identifier",
-                                "src": "572:14:1"
+                                "src": "1086:14:0"
                               }
                             ],
-                            "id": 78,
+                            "id": 63,
                             "name": "MemberAccess",
-                            "src": "572:24:1"
+                            "src": "1086:24:0"
                           }
                         ],
-                        "id": 79,
+                        "id": 64,
                         "name": "Assignment",
-                        "src": "563:33:1"
+                        "src": "1077:33:0"
                       }
                     ],
-                    "id": 80,
+                    "id": 65,
                     "name": "ExpressionStatement",
-                    "src": "563:33:1"
+                    "src": "1077:33:0"
                   },
                   {
                     "children": [
@@ -2202,33 +2658,33 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 30,
+                              "referencedDeclaration": 13,
                               "type": "function ()",
                               "value": "MissionComplete"
                             },
-                            "id": 81,
+                            "id": 66,
                             "name": "Identifier",
-                            "src": "611:15:1"
+                            "src": "1125:15:0"
                           }
                         ],
-                        "id": 82,
+                        "id": 67,
                         "name": "FunctionCall",
-                        "src": "611:17:1"
+                        "src": "1125:17:0"
                       }
                     ],
-                    "id": 83,
+                    "id": 68,
                     "name": "EmitStatement",
-                    "src": "606:22:1"
+                    "src": "1120:22:0"
                   }
                 ],
-                "id": 84,
+                "id": 69,
                 "name": "Block",
-                "src": "515:120:1"
+                "src": "958:191:0"
               }
             ],
-            "id": 85,
+            "id": 70,
             "name": "FunctionDefinition",
-            "src": "487:148:1"
+            "src": "930:219:0"
           },
           {
             "attributes": {
@@ -2240,7 +2696,7 @@
                 null
               ],
               "name": "getStatus",
-              "scope": 116,
+              "scope": 124,
               "stateMutability": "view",
               "superFunction": null,
               "visibility": "public"
@@ -2253,9 +2709,9 @@
                   ]
                 },
                 "children": [],
-                "id": 86,
+                "id": 71,
                 "name": "ParameterList",
-                "src": "659:2:1"
+                "src": "1192:2:0"
               },
               {
                 "children": [
@@ -2263,7 +2719,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "",
-                      "scope": 100,
+                      "scope": 86,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "enum MartketPlace.ShippingStatus",
@@ -2275,22 +2731,22 @@
                         "attributes": {
                           "contractScope": null,
                           "name": "ShippingStatus",
-                          "referencedDeclaration": 22,
+                          "referencedDeclaration": 5,
                           "type": "enum MartketPlace.ShippingStatus"
                         },
-                        "id": 87,
+                        "id": 72,
                         "name": "UserDefinedTypeName",
-                        "src": "682:14:1"
+                        "src": "1215:14:0"
                       }
                     ],
-                    "id": 88,
+                    "id": 73,
                     "name": "VariableDeclaration",
-                    "src": "682:14:1"
+                    "src": "1215:14:0"
                   }
                 ],
-                "id": 89,
+                "id": 74,
                 "name": "ParameterList",
-                "src": "681:16:1"
+                "src": "1214:16:0"
               },
               {
                 "children": [
@@ -2317,19 +2773,23 @@
                                 {
                                   "typeIdentifier": "t_bool",
                                   "typeString": "bool"
+                                },
+                                {
+                                  "typeIdentifier": "t_stringliteral_f60fe2d9d123295bf92ecf95167f1fa709e374da35e4c083bd39dc2d82acd8b1",
+                                  "typeString": "literal_string \"This function is restricted to the contract's owner\""
                                 }
                               ],
                               "overloadedDeclarations": [
-                                287,
-                                288
+                                142,
+                                143
                               ],
-                              "referencedDeclaration": 287,
-                              "type": "function (bool) pure",
+                              "referencedDeclaration": 143,
+                              "type": "function (bool,string memory) pure",
                               "value": "require"
                             },
-                            "id": 90,
+                            "id": 75,
                             "name": "Identifier",
-                            "src": "707:7:1"
+                            "src": "1240:7:0"
                           },
                           {
                             "attributes": {
@@ -2364,18 +2824,18 @@
                                       "overloadedDeclarations": [
                                         null
                                       ],
-                                      "referencedDeclaration": 284,
+                                      "referencedDeclaration": 139,
                                       "type": "msg",
                                       "value": "msg"
                                     },
-                                    "id": 91,
+                                    "id": 76,
                                     "name": "Identifier",
-                                    "src": "715:3:1"
+                                    "src": "1248:3:0"
                                   }
                                 ],
-                                "id": 92,
+                                "id": 77,
                                 "name": "MemberAccess",
-                                "src": "715:10:1"
+                                "src": "1248:10:0"
                               },
                               {
                                 "attributes": {
@@ -2383,32 +2843,49 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 26,
+                                  "referencedDeclaration": 9,
                                   "type": "address",
                                   "value": "owner"
                                 },
-                                "id": 93,
+                                "id": 78,
                                 "name": "Identifier",
-                                "src": "729:5:1"
+                                "src": "1262:5:0"
                               }
                             ],
-                            "id": 94,
+                            "id": 79,
                             "name": "BinaryOperation",
-                            "src": "715:19:1"
+                            "src": "1248:19:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "hexvalue": "546869732066756e6374696f6e206973207265737472696374656420746f2074686520636f6e74726163742773206f776e6572",
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "subdenomination": null,
+                              "token": "string",
+                              "type": "literal_string \"This function is restricted to the contract's owner\"",
+                              "value": "This function is restricted to the contract's owner"
+                            },
+                            "id": 80,
+                            "name": "Literal",
+                            "src": "1286:53:0"
                           }
                         ],
-                        "id": 95,
+                        "id": 81,
                         "name": "FunctionCall",
-                        "src": "707:28:1"
+                        "src": "1240:100:0"
                       }
                     ],
-                    "id": 96,
+                    "id": 82,
                     "name": "ExpressionStatement",
-                    "src": "707:28:1"
+                    "src": "1240:100:0"
                   },
                   {
                     "attributes": {
-                      "functionReturnParameters": 89
+                      "functionReturnParameters": 74
                     },
                     "children": [
                       {
@@ -2417,28 +2894,28 @@
                           "overloadedDeclarations": [
                             null
                           ],
-                          "referencedDeclaration": 24,
+                          "referencedDeclaration": 7,
                           "type": "enum MartketPlace.ShippingStatus",
                           "value": "status"
                         },
-                        "id": 97,
+                        "id": 83,
                         "name": "Identifier",
-                        "src": "754:6:1"
+                        "src": "1359:6:0"
                       }
                     ],
-                    "id": 98,
+                    "id": 84,
                     "name": "Return",
-                    "src": "747:13:1"
+                    "src": "1352:13:0"
                   }
                 ],
-                "id": 99,
+                "id": 85,
                 "name": "Block",
-                "src": "697:70:1"
+                "src": "1230:142:0"
               }
             ],
-            "id": 100,
+            "id": 86,
             "name": "FunctionDefinition",
-            "src": "641:126:1"
+            "src": "1174:198:0"
           },
           {
             "attributes": {
@@ -2450,8 +2927,8 @@
                 null
               ],
               "name": "Status",
-              "scope": 116,
-              "stateMutability": "view",
+              "scope": 124,
+              "stateMutability": "payable",
               "superFunction": null,
               "visibility": "public"
             },
@@ -2463,9 +2940,9 @@
                   ]
                 },
                 "children": [],
-                "id": 101,
+                "id": 87,
                 "name": "ParameterList",
-                "src": "788:2:1"
+                "src": "1408:2:0"
               },
               {
                 "children": [
@@ -2473,7 +2950,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "",
-                      "scope": 115,
+                      "scope": 112,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "enum MartketPlace.ShippingStatus",
@@ -2485,22 +2962,22 @@
                         "attributes": {
                           "contractScope": null,
                           "name": "ShippingStatus",
-                          "referencedDeclaration": 22,
+                          "referencedDeclaration": 5,
                           "type": "enum MartketPlace.ShippingStatus"
                         },
-                        "id": 102,
+                        "id": 88,
                         "name": "UserDefinedTypeName",
-                        "src": "811:14:1"
+                        "src": "1434:14:0"
                       }
                     ],
-                    "id": 103,
+                    "id": 89,
                     "name": "VariableDeclaration",
-                    "src": "811:14:1"
+                    "src": "1434:14:0"
                   }
                 ],
-                "id": 104,
+                "id": 90,
                 "name": "ParameterList",
-                "src": "810:16:1"
+                "src": "1433:16:0"
               },
               {
                 "children": [
@@ -2527,19 +3004,23 @@
                                 {
                                   "typeIdentifier": "t_bool",
                                   "typeString": "bool"
+                                },
+                                {
+                                  "typeIdentifier": "t_stringliteral_09e1e2a8ffde09dc0811be7f93ab83bde74771023b905e53623fd4fe9997fdd5",
+                                  "typeString": "literal_string \"This function is restricted to the contract's customer\""
                                 }
                               ],
                               "overloadedDeclarations": [
-                                287,
-                                288
+                                142,
+                                143
                               ],
-                              "referencedDeclaration": 287,
-                              "type": "function (bool) pure",
+                              "referencedDeclaration": 143,
+                              "type": "function (bool,string memory) pure",
                               "value": "require"
                             },
-                            "id": 105,
+                            "id": 91,
                             "name": "Identifier",
-                            "src": "836:7:1"
+                            "src": "1459:7:0"
                           },
                           {
                             "attributes": {
@@ -2552,7 +3033,7 @@
                               "isLValue": false,
                               "isPure": false,
                               "lValueRequested": false,
-                              "operator": "!=",
+                              "operator": "==",
                               "type": "bool"
                             },
                             "children": [
@@ -2574,18 +3055,18 @@
                                       "overloadedDeclarations": [
                                         null
                                       ],
-                                      "referencedDeclaration": 284,
+                                      "referencedDeclaration": 139,
                                       "type": "msg",
                                       "value": "msg"
                                     },
-                                    "id": 106,
+                                    "id": 92,
                                     "name": "Identifier",
-                                    "src": "844:3:1"
+                                    "src": "1467:3:0"
                                   }
                                 ],
-                                "id": 107,
+                                "id": 93,
                                 "name": "MemberAccess",
-                                "src": "844:10:1"
+                                "src": "1467:10:0"
                               },
                               {
                                 "attributes": {
@@ -2593,32 +3074,218 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 26,
+                                  "referencedDeclaration": 11,
                                   "type": "address",
-                                  "value": "owner"
+                                  "value": "customer"
                                 },
-                                "id": 108,
+                                "id": 94,
                                 "name": "Identifier",
-                                "src": "858:5:1"
+                                "src": "1481:8:0"
                               }
                             ],
-                            "id": 109,
+                            "id": 95,
                             "name": "BinaryOperation",
-                            "src": "844:19:1"
+                            "src": "1467:22:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "hexvalue": "546869732066756e6374696f6e206973207265737472696374656420746f2074686520636f6e7472616374277320637573746f6d6572",
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "subdenomination": null,
+                              "token": "string",
+                              "type": "literal_string \"This function is restricted to the contract's customer\"",
+                              "value": "This function is restricted to the contract's customer"
+                            },
+                            "id": 96,
+                            "name": "Literal",
+                            "src": "1491:56:0"
                           }
                         ],
-                        "id": 110,
+                        "id": 97,
                         "name": "FunctionCall",
-                        "src": "836:28:1"
+                        "src": "1459:89:0"
                       }
                     ],
-                    "id": 111,
+                    "id": 98,
                     "name": "ExpressionStatement",
-                    "src": "836:28:1"
+                    "src": "1459:89:0"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "tuple()",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_bool",
+                                  "typeString": "bool"
+                                }
+                              ],
+                              "overloadedDeclarations": [
+                                142,
+                                143
+                              ],
+                              "referencedDeclaration": 142,
+                              "type": "function (bool) pure",
+                              "value": "require"
+                            },
+                            "id": 99,
+                            "name": "Identifier",
+                            "src": "1558:7:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "commonType": {
+                                "typeIdentifier": "t_uint256",
+                                "typeString": "uint256"
+                              },
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "operator": "==",
+                              "type": "bool"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "member_name": "value",
+                                  "referencedDeclaration": null,
+                                  "type": "uint256"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 139,
+                                      "type": "msg",
+                                      "value": "msg"
+                                    },
+                                    "id": 100,
+                                    "name": "Identifier",
+                                    "src": "1566:3:0"
+                                  }
+                                ],
+                                "id": 101,
+                                "name": "MemberAccess",
+                                "src": "1566:9:0"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "commonType": {
+                                    "typeIdentifier": "t_rational_1_by_1",
+                                    "typeString": "int_const 1"
+                                  },
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": true,
+                                  "lValueRequested": false,
+                                  "operator": "**",
+                                  "type": "int_const 1"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "hexvalue": "31",
+                                      "isConstant": false,
+                                      "isLValue": false,
+                                      "isPure": true,
+                                      "lValueRequested": false,
+                                      "subdenomination": null,
+                                      "token": "number",
+                                      "type": "int_const 1",
+                                      "value": "1"
+                                    },
+                                    "id": 102,
+                                    "name": "Literal",
+                                    "src": "1579:1:0"
+                                  },
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "isConstant": false,
+                                      "isLValue": false,
+                                      "isPure": true,
+                                      "lValueRequested": false,
+                                      "operator": "-",
+                                      "prefix": true,
+                                      "type": "int_const -5000000000000000000"
+                                    },
+                                    "children": [
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "hexvalue": "35",
+                                          "isConstant": false,
+                                          "isLValue": false,
+                                          "isPure": true,
+                                          "lValueRequested": false,
+                                          "subdenomination": "ether",
+                                          "token": "number",
+                                          "type": "int_const 5000000000000000000",
+                                          "value": "5"
+                                        },
+                                        "id": 103,
+                                        "name": "Literal",
+                                        "src": "1585:7:0"
+                                      }
+                                    ],
+                                    "id": 104,
+                                    "name": "UnaryOperation",
+                                    "src": "1584:8:0"
+                                  }
+                                ],
+                                "id": 105,
+                                "name": "BinaryOperation",
+                                "src": "1579:13:0"
+                              }
+                            ],
+                            "id": 106,
+                            "name": "BinaryOperation",
+                            "src": "1566:26:0"
+                          }
+                        ],
+                        "id": 107,
+                        "name": "FunctionCall",
+                        "src": "1558:35:0"
+                      }
+                    ],
+                    "id": 108,
+                    "name": "ExpressionStatement",
+                    "src": "1558:35:0"
                   },
                   {
                     "attributes": {
-                      "functionReturnParameters": 104
+                      "functionReturnParameters": 90
                     },
                     "children": [
                       {
@@ -2627,38 +3294,190 @@
                           "overloadedDeclarations": [
                             null
                           ],
-                          "referencedDeclaration": 24,
+                          "referencedDeclaration": 7,
                           "type": "enum MartketPlace.ShippingStatus",
                           "value": "status"
                         },
-                        "id": 112,
+                        "id": 109,
                         "name": "Identifier",
-                        "src": "881:6:1"
+                        "src": "1610:6:0"
                       }
                     ],
-                    "id": 113,
+                    "id": 110,
                     "name": "Return",
-                    "src": "874:13:1"
+                    "src": "1603:13:0"
                   }
                 ],
-                "id": 114,
+                "id": 111,
                 "name": "Block",
-                "src": "826:68:1"
+                "src": "1449:174:0"
               }
             ],
-            "id": 115,
+            "id": 112,
             "name": "FunctionDefinition",
-            "src": "773:121:1"
+            "src": "1393:230:0"
+          },
+          {
+            "attributes": {
+              "documentation": "Fonction test pour savoir si on arrive a avoir le balance",
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "cell",
+              "scope": 124,
+              "stateMutability": "payable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 113,
+                "name": "ParameterList",
+                "src": "1723:2:0"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 123,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint",
+                          "type": "uint256"
+                        },
+                        "id": 114,
+                        "name": "ElementaryTypeName",
+                        "src": "1750:4:0"
+                      }
+                    ],
+                    "id": 115,
+                    "name": "VariableDeclaration",
+                    "src": "1750:4:0"
+                  }
+                ],
+                "id": 116,
+                "name": "ParameterList",
+                "src": "1749:6:0"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "functionReturnParameters": 116
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "member_name": "balance",
+                          "referencedDeclaration": null,
+                          "type": "uint256"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "isStructConstructorCall": false,
+                              "lValueRequested": false,
+                              "names": [
+                                null
+                              ],
+                              "type": "address",
+                              "type_conversion": true
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": [
+                                    {
+                                      "typeIdentifier": "t_contract$_MartketPlace_$124",
+                                      "typeString": "contract MartketPlace"
+                                    }
+                                  ],
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": true,
+                                  "lValueRequested": false,
+                                  "type": "type(address)",
+                                  "value": "address"
+                                },
+                                "id": 117,
+                                "name": "ElementaryTypeNameExpression",
+                                "src": "1773:7:0"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 153,
+                                  "type": "contract MartketPlace",
+                                  "value": "this"
+                                },
+                                "id": 118,
+                                "name": "Identifier",
+                                "src": "1781:4:0"
+                              }
+                            ],
+                            "id": 119,
+                            "name": "FunctionCall",
+                            "src": "1773:13:0"
+                          }
+                        ],
+                        "id": 120,
+                        "name": "MemberAccess",
+                        "src": "1773:21:0"
+                      }
+                    ],
+                    "id": 121,
+                    "name": "Return",
+                    "src": "1766:28:0"
+                  }
+                ],
+                "id": 122,
+                "name": "Block",
+                "src": "1756:45:0"
+              }
+            ],
+            "id": 123,
+            "name": "FunctionDefinition",
+            "src": "1710:91:0"
           }
         ],
-        "id": 116,
+        "id": 124,
         "name": "ContractDefinition",
-        "src": "34:863:1"
+        "src": "66:1930:0"
       }
     ],
-    "id": 117,
+    "id": 125,
     "name": "SourceUnit",
-    "src": "0:907:1"
+    "src": "32:1974:0"
   },
   "compiler": {
     "name": "solc",
@@ -2666,11 +3485,15 @@
   },
   "networks": {},
   "schemaVersion": "3.4.10",
-  "updatedAt": "2022-10-28T12:54:59.278Z",
+  "updatedAt": "2022-10-28T14:14:09.873Z",
   "devdoc": {
     "methods": {}
   },
   "userdoc": {
-    "methods": {}
+    "methods": {
+      "cell()": {
+        "notice": "Fonction test pour savoir si on arrive a avoir le balance"
+      }
+    }
   }
 }

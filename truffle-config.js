@@ -1,11 +1,20 @@
+require('dotenv').config();
+var HDWalletProvider = require("truffle-hdwallet-provider");
+
+
 module.exports = {
   networks: {
-    development: {
-      host: "localhost",
-      port: 8545,
-      network_id: "*", // Match any network id
-      gas: 5000000
-    }
+    
+    matic: {
+      provider: () => new HDWalletProvider(process.env.PASS_PHRASE, `https://polygon-mainnet.g.alchemy.com/v2/${process.env.API_KEY}`),
+      network_id: 80001,
+      gas: 5500000,
+      confirmations: 2,
+      timeoutBlocks: 200,
+      skipDryRun: true
+    },
+
+
   },
   compilers: {
     solc: {
