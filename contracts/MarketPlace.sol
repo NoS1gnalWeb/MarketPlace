@@ -15,7 +15,6 @@ contract MarketPlace{
     */
     constructor() public {
         owner = msg.sender;
-        //customer = _customer;
         status = ShippingStatus.PENDING;
     }
 
